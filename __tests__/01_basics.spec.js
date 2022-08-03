@@ -2,7 +2,7 @@ describe('Post', () => {
     beforeAll(async () => {
         await page.goto('https://react-redux.realworld.io/#/login')
     })
-    test.jestPlaywrightSkip({browsers:['chromium']},'Sign In' ,async () => {
+    test.jestPlaywrightSkip({browsers:['webkit']},'Sign In' ,async () => {
         //await page.goto('https://react-redux.realworld.io/#/login')
         const title = await page.title()
         expect(title).toBe('Conduit')
@@ -16,6 +16,10 @@ describe('Post', () => {
             await page.click('form >> "Sign in"')
         ])
     })
+    // afterEach(async () => {
+    //     const data = await page.screenshot()     //this is the way how to add screenshots to HTML Report
+    //     await addAttach(data)
+    // })
     afterAll(async () => {
         await browser.close()
     })

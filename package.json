@@ -4,6 +4,7 @@
   "description": "This is playwright project with JEST",
   "main": "index.js",
   "scripts": {
+    "pretest": "rimraf -f screenshots; mkdir screenshots",
     "test": "jest"
   },
   "repository": {
@@ -21,5 +22,8 @@
     "jest": "^28.1.3",
     "jest-playwright-preset": "^2.0.0",
     "playwright": "^1.24.2"
+  },
+  "dependencies": {
+    "jest-html-reporters": "^3.0.10"
   }
 }

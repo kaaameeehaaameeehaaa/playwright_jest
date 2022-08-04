@@ -1,3 +1,4 @@
+const {addAttach} = require("jest-html-reporters");
 describe('Post', () => {
     beforeAll(async () => {
         await page.goto('https://react-redux.realworld.io/#/login')
@@ -20,6 +21,8 @@ describe('Post', () => {
     //     const data = await page.screenshot()     //this is the way how to add screenshots to HTML Report
     //     await addAttach(data)
     // })
+
+
     afterAll(async () => {
         await browser.close()
     })

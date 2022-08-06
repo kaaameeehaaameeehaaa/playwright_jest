@@ -19,7 +19,7 @@ describe('Post', () => {
         const email = await login.email()            //to get email from login variable
         await email.fill('nerxtest@gmail.com')
         await email.press('Tab')
-        await login.password_fill('nerxtest')        //we dont need to create variable "password" because we have function password_fill in pageObjects.js file. Better to do like this
+        await login.password_fill('nerxtest')        //we don't need to create variable "password" because we have function password_fill in pageObjects.js file. Better to do like this
 
         await Promise.all([
             page.waitForNavigation(),

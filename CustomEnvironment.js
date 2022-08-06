@@ -22,6 +22,7 @@ class CustomEnvironment extends PlaywrightEnvironment {
 
             await this.global.page.screenshot({
                 path: `screenshots/${parentName} ${specName}.png`,
+                
             })
         }
     }

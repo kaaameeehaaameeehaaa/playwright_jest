@@ -1,10 +1,10 @@
 const {addAttach} = require("jest-html-reporters");
-Login = require('../pageObjects/login');
+Login = require('../pageObjects/login');  // to get variables from other file
 
 
 describe('Post', () => {
 
-    const login = new Login()
+    const login = new Login()  //to make variable which contains all variables from file              
 
     beforeAll(async () => {
         await page.goto('https://react-redux.realworld.io/#/login')
@@ -16,10 +16,10 @@ describe('Post', () => {
         const title = await page.title()
         expect(title).toBe('Conduit')
 
-        const email = await login.email()
+        const email = await login.email()            //to get email from login variable
         await email.fill('nerxtest@gmail.com')
         await email.press('Tab')
-        await login.password_fill('nerxtest')
+        await login.password_fill('nerxtest')        //we dont need to create variable "password" because we have function password_fill in pageObjects.js file. Better to do like this
 
         await Promise.all([
             page.waitForNavigation(),

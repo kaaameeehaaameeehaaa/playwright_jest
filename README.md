@@ -1,6 +1,6 @@
 # playwright_jest
 
-This is playwright project with JEST
+This is playwright project setup Jest + HTML Report
 
 
 1. HTML Reporters 

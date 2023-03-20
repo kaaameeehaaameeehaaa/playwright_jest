@@ -1,7 +1,7 @@
 const{expect} = require('@playwright/test')
 const {addAttach} = require("jest-html-reporters");
-Login = require('../pageObjects/login');  // to get variables from other file
-data = require('../testData/data.json') // to get static variables
+Login = require('../../pageObjects/login');  // to get variables from other file
+data = require('../../testData/data.json') // to get static variables
 
 
 

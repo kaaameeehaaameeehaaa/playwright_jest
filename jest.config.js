@@ -9,7 +9,6 @@ module.exports = {
             'fileName': 'report.html',
             'expand': true,
             "openReport": true
-
         }]
     ]
 }
